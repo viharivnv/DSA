@@ -1,0 +1,214 @@
+# Implementation of Bayesian Curve fitting from Bishop page 31
+
+
+import csv
+
+
+
+'''
+def predict_val(x,t):
+    rel_err = 0
+    abs_err = 0
+    l=len(x)
+    N=5
+    alpha=0.4517
+    beta=14.472
+    arr1=np.zeros( (N+1,N+1))
+    arr2=np.zeros( (N+1,N+1))
+    s=np.zeros((N+1,N+1))
+    lt=np.zeros((N+1,1))
+
+
+    for i in range(0,l-2):
+        for j in range(0,N+1):
+            temp=float(pow(x[i],j))
+            arr1[j][0]+=temp
+
+    for i in range(0,N+1):
+        temp1=float(pow(x[l-2],i))
+        arr2[0][i]=temp1
+
+    smat=np.dot(arr1,arr2)
+    smat *= beta
+    #smat=[float(x) for x in smat]
+
+    s=smat
+    for i in range(0,N+1):
+        for j in range(0,N+1):
+            if i==j:
+                s[i][j]+=alpha
+
+    smat=np.linalg.inv(smat)
+    
+    for i in range(0,l-2):
+        for j in range(0,N+1):
+            lt[j][0]+=pow(x[i],j)*t[i]
+
+    arr3=arr2.dot(smat)
+    prediction=np.dot(arr3,lt)
+    prediction*=beta
+
+    p=prediction[0][0]
+    a = t[len(x) - 2]
+    b = t[len(x) - 1]
+    print(a)
+    print("Actual Price is",t[l - 1], "Predicted Price is",prediction[0][0])
+    abs_err=abs(t[l-1]-prediction[0][0])
+    rel_err=abs_err/t[l-1]
+    print("Absolute error is:",abs_err,"and Relative error is",rel_err)
+
+    tp=0
+    tn=0
+    fp=0
+    fn=0
+    if a>p and a>b:
+        tn+=1
+    if a>p and a<b:
+        fn+=1
+    if a<p and a<b:
+        tp+=1
+    if a<p and a>b:
+        fp+=1
+
+    return  abs_err,rel_err, tp, tn, fp, fn
+
+
+
+def main():
+
+    arr = ["AAPL", "AMZN", "FB", "GOOGL", "MA", "NFLX", "TRIP", "TSLA", "TWTR", "VAC","AAPLtest", "AMZNtst", "FBtst", "GOOGLtest", "MAtst", "NFLXtst", "TRIPtst", "TSLAtst", "TWTRtst", "VACtst"]
+    rel_err=0
+    abs_err=0
+    tp=tn=fn=fp=0
+
+    for text in arr:
+        print("For the Company ID:",text)
+        xarr1 = []
+        tarr1 = []
+        text = text + '.csv'
+        with open(text, newline='\n') as csvfile:
+            reader = csv.DictReader(csvfile)
+            for row in reader:
+                xarr1.append(row['x'])
+                tarr1.append(row['target'])
+
+        xarr = [float(i) for i in xarr1]
+        tarr = [float(i) for i in tarr1]
+        abs, rel, tp1, tn1, fp1, fn1 =predict_val(xarr,tarr)
+        tp+=tp1
+        fp+=fp1
+        tn+=tn1
+        fn+=fn1
+
+        abs_err+=abs
+        rel_err+=rel
+
+    print(tp,tn,fn,fp)
+    tp_rate = tp / (tp + fn)
+    tn_rate = tn / (tn + fp)
+    Accuracy = (tp + tn) / (tp + tn + fn + fp)
+    precision = tp / (tp + fp)
+
+    print('For total Estimation:')
+    print("Absolute error is:", abs_err/20, "and Relative error is", rel_err/20)
+    print('Accuracy: ', Accuracy, 'True Positive Rate:',tp_rate, 'True Negative Rate:',tn_rate,'Precision:',precision)
+'''
+
+'''
+import numpy as np
+#import matplotlib.pyplot as plt
+
+
+
+def main():
+    arr = ["AAPL"]
+    rel_err = 0
+    abs_err = 0
+    tp = tn = fn = fp = 0
+
+    for text in arr:
+        print("For the Company ID:", text)
+        xarr1 = []
+        tarr1 = []
+        text = text + '.csv'
+        with open(text, newline='\n') as csvfile:
+            reader = csv.DictReader(csvfile)
+            for row in reader:
+                xarr1.append(row['x'])
+                tarr1.append(row['target'])
+
+        x = [float(i) for i in xarr1]
+        t = [float(i) for i in tarr1]
+
+    # Note: polynomialOrder too large will yeild warning: RankWarning: Polyfit may be poorly conditioned
+    # Note: depends on the signal you're fitting. A sine wave has no problem with order = 200
+    # Note: but this random data doesn't fit right with order > 18 (you can see it by eye)
+    polynomialOrder = 10
+
+    coefficients = np.polyfit(t, t,polynomialOrder)  # find the coefficients for a polynomialOrder order polynomial to make a best fit
+    p = np.poly1d(coefficients)  # This makes the polynomial class of a polynomialOrder order polynomial with the best fit coefficients
+    polynomial = p(t)  # This calculates the polynomial at every data point. This is the data you plot.
+    print(polynomial)
+
+   # fig = plt.figure()
+    #ax1 = fig.add_subplot(111)
+    #plt.plot(t, y, t, polynomial)
+   # plt.show()
+'''
+import numpy as np
+
+
+
+
+def main():
+    arr = ["AAPL", "AMZN", "FB", "GOOGL", "MA", "NFLX", "TRIP", "TSLA", "TWTR", "VAC"]
+    #arr=[arr1[1]]
+    print(arr)
+    N = 5
+    m = 9
+    M = m + 1
+    w = np.random.rand(N, 1)
+
+    mean_abs_err = []
+    rel_avg_err = []
+    for stock in arr:
+        x_train, t_train = [i for i in range(1, N + 1)], []
+        x_list, t_list = [], []
+        x_test = N + 1
+        t_test = []
+        row_count = 1
+        stock = stock + '.csv'
+        with open(stock, newline='\n') as csvfile:
+            reader = csv.DictReader(csvfile)
+            #next(readFile)
+            for row in reader:
+
+                if row_count <N+1:
+                    t_train.append(float(row['target']))
+                elif row_count<2*N+1:
+                    t_test.append(float(row['target']))
+                    #t_train.append(t_list)
+                    t_list = []
+                row_count += 1
+        abs_err = 10.0
+        t_tot = 0.0
+        y_i=0
+        while abs_err >3:
+            for set_no in range(len(t_train)):
+                y_i = w[set_no] * pow(x_train[set_no], set_no)
+            abs_err=abs(t_train[len(t_train)-1]-y_i)
+
+            #print(abs_err)
+            #print(t_train[len(t_train)-1])
+            if abs_err>3:
+                w = np.random.rand(N, 1)
+
+        
+        print(y_i)
+        print(t_train[len(t_train) - 1])
+    #print(mean_abs_err)
+    #print(rel_avg_err)
+
+
+if __name__ == "__main__":
+    main()

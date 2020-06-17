@@ -1,0 +1,28 @@
+from mininet.topo import Topo
+
+class MyTopo( Topo ):
+    "Simple topology example."
+
+    def __init__( self ):
+        "Create custom topo."
+
+        # Initialize topology
+        Topo.__init__( self )
+
+        # Add hosts and switches
+        h1 = self.addHost( 'h1' )
+        h2 = self.addHost( 'h2' )
+        h3 = self.addHost( 'h3' )
+        leftSwitch = self.addSwitch( 's0' )
+        h1.setIP( '192.168.1.1/24' )
+        h2.setIP( '192.168.1.2/24' )
+        h3.setIP( '192.168.1.3/24' )
+
+        # Add links
+        self.addLink( h1, leftSwitch )
+        self.addLink( h2, leftSwitch )
+        self.addLink( leftSwitch, rightSwitch )
+        self.addLink( rightSwitch, h3 )
+
+
+topos = { 'mytopo': ( lambda: MyTopo() ) }

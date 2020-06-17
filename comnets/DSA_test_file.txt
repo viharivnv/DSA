@@ -1,0 +1,59 @@
+i=1
+    while (True):
+        print(i)
+        try:
+            fp = file.readline()
+            if not fp:
+                break
+            else:
+                print(fp)
+            i += 1
+        except:
+            pass
+
+
+3644 3587
+106502
+
+
+fp = fp.split('/')
+
+                for i in range(1, len(fp)):
+                    graph.setdefault(fp[0], []).append((fp[i]))
+                    graph.setdefault(fp[i], []).append((fp[0]))
+fp=fp.split('/')
+    for i in range(len(fp)):
+        fp[0]
+
+
+Connected components
+
+
+
+maximum = max(mydict, key=mydict.get)  # Just use 'min' instead of 'max' for minimum.
+print(maximum, mydict[maximum])
+
+
+
+from collections import Counter
+
+votes = {"user1": "yes", "user2": "no", "user3": "yes",
+         "user4": "no", "user5": "maybe", "user6": "yes"}
+
+res = Counter(votes.values())
+
+print(res)
+
+Counter({'yes': 3, 'no': 2, 'maybe': 1})
+
+
+
+
+graph = {}
+    for i in range(1,len(fp)):
+        graph.setdefault(fp[0], []).append((fp[i]))
+        graph.setdefault(fp[i], []).append((fp[0]))
+
+    print(graph)
+
+13,15,17,23,25,26,29,31,33,36

@@ -1,0 +1,115 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="ChangeListManager">
+    <list default="true" id="7bcc242a-3750-4514-a978-ffcc5b00296d" name="Default Changelist" comment="" />
+    <option name="SHOW_DIALOG" value="false" />
+    <option name="HIGHLIGHT_CONFLICTS" value="true" />
+    <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
+    <option name="LAST_RESOLUTION" value="IGNORE" />
+  </component>
+  <component name="FileTemplateManagerImpl">
+    <option name="RECENT_TEMPLATES">
+      <list>
+        <option value="Python Script" />
+      </list>
+    </option>
+  </component>
+  <component name="ProjectId" id="1ZaTJcbESoYkzZS0aE2IcNCgGOy" />
+  <component name="ProjectViewState">
+    <option name="hideEmptyMiddlePackages" value="true" />
+    <option name="showExcludedFiles" value="true" />
+    <option name="showLibraryContents" value="true" />
+  </component>
+  <component name="PropertiesComponent">
+    <property name="RunOnceActivity.ShowReadmeOnStart" value="true" />
+    <property name="last_opened_file_path" value="$USER_HOME$/mysite/blog/templates/blog/home.html" />
+    <property name="settings.editor.selected.configurable" value="com.jetbrains.python.configuration.PyActiveSdkModuleConfigurable" />
+  </component>
+  <component name="RunManager">
+    <configuration name="data_collection" type="PythonConfigurationType" factoryName="Python" temporary="true" nameIsGenerated="true">
+      <module name="datacollection" />
+      <option name="INTERPRETER_OPTIONS" value="" />
+      <option name="PARENT_ENVS" value="true" />
+      <envs>
+        <env name="PYTHONUNBUFFERED" value="1" />
+      </envs>
+      <option name="SDK_HOME" value="" />
+      <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$" />
+      <option name="IS_MODULE_SDK" value="true" />
+      <option name="ADD_CONTENT_ROOTS" value="true" />
+      <option name="ADD_SOURCE_ROOTS" value="true" />
+      <option name="SCRIPT_NAME" value="$PROJECT_DIR$/data_collection.py" />
+      <option name="PARAMETERS" value="" />
+      <option name="SHOW_COMMAND_LINE" value="false" />
+      <option name="EMULATE_TERMINAL" value="false" />
+      <option name="MODULE_MODE" value="false" />
+      <option name="REDIRECT_INPUT" value="false" />
+      <option name="INPUT_FILE" value="" />
+      <method v="2" />
+    </configuration>
+    <recent_temporary>
+      <list>
+        <item itemvalue="Python.data_collection" />
+      </list>
+    </recent_temporary>
+  </component>
+  <component name="SvnConfiguration">
+    <configuration />
+  </component>
+  <component name="TaskManager">
+    <task active="true" id="Default" summary="Default task">
+      <changelist id="7bcc242a-3750-4514-a978-ffcc5b00296d" name="Default Changelist" comment="" />
+      <created>1585076134571</created>
+      <option name="number" value="Default" />
+      <option name="presentableId" value="Default" />
+      <updated>1585076134571</updated>
+    </task>
+    <servers />
+  </component>
+  <component name="WindowStateProjectService">
+    <state x="549" y="168" key="FileChooserDialogImpl" timestamp="1585588882548">
+      <screen x="0" y="0" width="1536" height="824" />
+    </state>
+    <state x="549" y="168" key="FileChooserDialogImpl/0.0.1536.824@0.0.1536.824" timestamp="1585588882548" />
+    <state width="1515" height="142" key="GridCell.Tab.0.bottom" timestamp="1585794078282">
+      <screen x="0" y="0" width="1536" height="824" />
+    </state>
+    <state width="1515" height="142" key="GridCell.Tab.0.bottom/0.0.1536.824@0.0.1536.824" timestamp="1585794078282" />
+    <state width="1515" height="142" key="GridCell.Tab.0.center" timestamp="1585794078281">
+      <screen x="0" y="0" width="1536" height="824" />
+    </state>
+    <state width="1515" height="142" key="GridCell.Tab.0.center/0.0.1536.824@0.0.1536.824" timestamp="1585794078281" />
+    <state width="1515" height="142" key="GridCell.Tab.0.left" timestamp="1585794078281">
+      <screen x="0" y="0" width="1536" height="824" />
+    </state>
+    <state width="1515" height="142" key="GridCell.Tab.0.left/0.0.1536.824@0.0.1536.824" timestamp="1585794078281" />
+    <state width="1515" height="142" key="GridCell.Tab.0.right" timestamp="1585794078281">
+      <screen x="0" y="0" width="1536" height="824" />
+    </state>
+    <state width="1515" height="142" key="GridCell.Tab.0.right/0.0.1536.824@0.0.1536.824" timestamp="1585794078281" />
+    <state width="1515" height="261" key="GridCell.Tab.1.bottom" timestamp="1585413290043">
+      <screen x="0" y="0" width="1536" height="824" />
+    </state>
+    <state width="1515" height="261" key="GridCell.Tab.1.bottom/0.0.1536.824@0.0.1536.824" timestamp="1585413290043" />
+    <state width="1515" height="261" key="GridCell.Tab.1.center" timestamp="1585413290043">
+      <screen x="0" y="0" width="1536" height="824" />
+    </state>
+    <state width="1515" height="261" key="GridCell.Tab.1.center/0.0.1536.824@0.0.1536.824" timestamp="1585413290043" />
+    <state width="1515" height="261" key="GridCell.Tab.1.left" timestamp="1585413290042">
+      <screen x="0" y="0" width="1536" height="824" />
+    </state>
+    <state width="1515" height="261" key="GridCell.Tab.1.left/0.0.1536.824@0.0.1536.824" timestamp="1585413290042" />
+    <state width="1515" height="261" key="GridCell.Tab.1.right" timestamp="1585413290043">
+      <screen x="0" y="0" width="1536" height="824" />
+    </state>
+    <state width="1515" height="261" key="GridCell.Tab.1.right/0.0.1536.824@0.0.1536.824" timestamp="1585413290043" />
+    <state x="277" y="56" key="SettingsEditor" timestamp="1585077840949">
+      <screen x="0" y="0" width="1536" height="824" />
+    </state>
+    <state x="277" y="56" key="SettingsEditor/0.0.1536.824@0.0.1536.824" timestamp="1585077840949" />
+    <state x="465" y="238" key="com.intellij.ide.util.TipDialog" timestamp="1585793916954">
+      <screen x="0" y="0" width="1536" height="824" />
+    </state>
+    <state x="465" y="238" key="com.intellij.ide.util.TipDialog/0.0.1536.824@0.0.1536.824" timestamp="1585793916954" />
+  </component>
+</project>

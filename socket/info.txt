@@ -1,0 +1,3 @@
+This is Assignment-6 using network Programming.
+This assignment uses a server and a client.
+The server listens to the client and reponds appropriately.

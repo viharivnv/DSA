@@ -1,0 +1,41 @@
+search and prediction:
+
+Trie seraches the prefix char by char
+ prints children of the last char untill all the children are traversed
+
+Radix searches the prefix if present
+if present prints the node containing the prefix and the corresponding children
+
+Both the trees prints the prefix if it was added as a valid word into the structure
+
+Now we will talk about the results we got on working these functionalities and data structutres
+
+
+
+Firstly Trie tree,
+
+Here we can see that as we increase the number of words The runtime of insertion incresaes.
+
+But this increase is nonlinear. 
+This is due to the fact that the insertion rate of a trie is a function of number of characters inserted 
+but not the words.
+
+The case is same with the search even for which the runtime increases, 
+it depends on the number of characters present in the word searched, here the number of distinct characters
+i.e. the children of the prefix searched
+
+for example if I say words predict, prediction, 
+the search of prefix predict will be a function of 10 but not the total count 7
+
+
+Radix
+The case is same with Radix tree, but the only difference is instead of characters as nodes,
+ it will have substrings as the nodes
+
+And we can see relatively less number of nodes were created in Radix tree
+
+
+Insertion analysis:
+We have ploted the number of nodes created vs the number of words inserted. 
+we can see Tri has a very large number of nodes compared to radix for the same number of words
+(here the same words are inserted in both the trees)

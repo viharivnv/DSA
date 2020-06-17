@@ -1,0 +1,11 @@
+abandon
+bound
+catabomb
+data
+empty
+filler
+gigantic
+heuristic
+ironic
+jasmine
+kleptomatic
